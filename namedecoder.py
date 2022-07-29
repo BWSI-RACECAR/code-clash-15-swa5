@@ -61,7 +61,8 @@ class Solution:
             if item != "":
                 newstuff.append(item)
 
-        retstring = ("First name = " + newstuff[0] + ", Last name = " + newstuff[1] + ", id = " + newstuff[2])
+        if newstuff is not None:
+            retstring = ("First name = " + newstuff[0] + ", Last name = " + newstuff[1] + ", id = " + newstuff[2])
 
 
 
