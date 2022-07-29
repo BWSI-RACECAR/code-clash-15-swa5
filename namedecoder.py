@@ -37,38 +37,72 @@ class Solution:
         # return: string
 
         # TODO: Write code below to return a string with the solution to the prompt
-        # strings = id
-        # id = []
-
-        # for char in strings: 
-        #     id.append(char)
+        # long=id
+        # wastealpha=[]
+        # wastenum = []
+        # for char in long:
+        #     if char.isalpha(): 
+        #         wastealpha.append(char)
+        #     if char.isnumeric():
+        #         wastenum.append(char)
 
         
-        # stuff  = []
-        # word = ""
-        # for i in range(len(id)-1):
-        #     if id[i] == "0" and id[i+1] != 0: 
+        # idnum = ""
 
-        #         for letter in range(i):
-        #             word += str(id[letter])
-        #             id.remove(id[letter])
-        #         stuff.append(word)
+        # for number in wastenum: 
+        #     if number != "0":
+        #         idnum += str(number)
+
+        
+        # firstname = ""
+        # lastname = ""
+
+        # for i in range(1, len(wastealpha)): 
+        #     if wastealpha[i].isupper():
+        #         seperator = wastealpha.index(wastealpha[i])  
+
+        # for letter in range(seperator):
+        #     firstname += wastealpha[letter]
+
+        # for letter in range(seperator, len(wastealpha)):
+        #     lastname += wastealpha[letter]
+
+        # retstring = ""
+        # retstring = ("First name = " + firstname + ", Last name = " + lastname + ", id = " + idnum)
+        # return retstring
 
 
-        stuff = id.split("0")
-        newstuff = []
-        for item in stuff: 
-            if item != "":
-                newstuff.append(item)
+        idnum = ""
+        for char in id: 
+            if char.isnumeric() and char != "0":
+                idnum += str(char)
 
-        if newstuff is not None:
-            retstring = ("First name = " + newstuff[0] + ", Last name = " + newstuff[1] + ", id = " + newstuff[2])
+        newid = ""
+
+        for char in id: 
+            if char.isnumeric() == False or char == "0":
+                newid += char
+    
+        split = newid.split("0")
+        namecontent = []
+        for item in split:
+            if item.isalpha():
+                namecontent.append(item)
+                
+        retstring = ("First name = " + namecontent[0] + ", Last name = " + namecontent[1] + ", id = " + idnum)
 
 
 
 
 
-        return retstring
+        return retstring  
+
+# Joeseph0000Engleberger215
+# Isaac00Asimov0001
+# Marc00000000Raibert0023
+# Raffaello0DAndea00003178
+# Daniela00000Rus0132
+
 
 def main():
     string1 = input()
@@ -79,3 +113,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+       
